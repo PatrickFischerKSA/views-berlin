@@ -226,6 +226,23 @@ main {
   background: #000;
 }
 
+.section--intro-video .card--intro-video {
+  max-width: 25%;
+  margin: 0 auto;
+}
+
+.media--intro-video {
+  display: flex;
+  justify-content: center;
+}
+
+.intro-video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
 .media iframe {
   width: 100%;
   border: none;
@@ -325,6 +342,7 @@ main {
 @media (max-width: 1100px) {
   .hero, main { padding-left: 200px; padding-right: 40px; }
   .grid--3 { grid-template-columns: 1fr; }
+  .section--intro-video .card--intro-video { max-width: 50%; }
 }
 
 @media (max-width: 900px) {
@@ -340,9 +358,11 @@ main {
   .hero, main { padding: 30px 24px; }
   .hero { grid-template-columns: 1fr; }
   .grid--2 { grid-template-columns: 1fr; }
+  .section--intro-video .card--intro-video { max-width: 70%; }
 }
 
 @media (max-width: 600px) {
   .section--dark, .section--alt { padding: 40px 20px; }
   .hero__content h1 { font-size: 40px; }
+  .section--intro-video .card--intro-video { max-width: 100%; }
 }
