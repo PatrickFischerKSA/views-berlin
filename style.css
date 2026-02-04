@@ -26,8 +26,10 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("media/BildYasira.jpg") center / cover no-repeat fixed;
-  opacity: 0.08;
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)),
+    url("media/BildYasira.jpg") center / cover no-repeat fixed;
+  opacity: 0.04;
   z-index: 0;
   pointer-events: none;
 }
