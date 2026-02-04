@@ -18,14 +18,14 @@
         Schritt für Schritt von Analyse zu eigener Positionierung.
       </p>
       <div class="hero__actions">
-        <button class="btn" data-scroll="#module-media">Direkt zu den Medien</button>
-        <button class="btn btn--ghost" data-scroll="#module-work">Arbeitsmodus</button>
+        <button class="btn" data-scroll="#module-analysis">Direkt zur Analyse</button>
+        <button class="btn btn--ghost" data-scroll="#module-close-reading">Close Reading</button>
       </div>
     </div>
     <div class="hero__stats">
       <div class="stat">
         <span class="stat__label">Module</span>
-        <span class="stat__value">6</span>
+        <span class="stat__value">8</span>
       </div>
       <div class="stat">
         <span class="stat__label">Interaktive Elemente</span>
@@ -42,9 +42,11 @@
     <div class="side-nav__logo">VIEWS</div>
     <button class="side-nav__toggle" aria-expanded="false">Menü</button>
     <ul class="side-nav__list">
-      <li><a href="#module-work">Arbeitsmodus</a></li>
-      <li><a href="#module-media">Filme & Audio</a></li>
-      <li><a href="#module-reading">Lektüre</a></li>
+      <li><a href="#module-intro-film">Einstieg</a></li>
+      <li><a href="#module-close-reading">Close Reading</a></li>
+      <li><a href="#module-questions">VIEWS_Fragen</a></li>
+      <li><a href="#module-material">VIEWS Material</a></li>
+      <li><a href="#module-analysis">Analyse von VIEWS</a></li>
       <li><a href="#module-padlet">Padlet</a></li>
       <li><a href="#module-frames">Analyse-Frames</a></li>
       <li><a href="#module-synthesis">Synthese</a></li>
@@ -74,18 +76,61 @@
       </div>
     </section>
 
-    <section id="module-media" class="section">
+    <section id="module-close-reading" class="section section--alt">
       <div class="section__header">
-        <h2>Filme & Audio</h2>
-        <p>Alle Filme werden als Dropbox‑Links eingebunden. Audio wird über Spotify eingebettet.</p>
+        <h2>Close Reading</h2>
+        <p>Arbeite direkt am Text und markiere Schlüsselstellen für Figuren, Motive und Erzählperspektive.</p>
+      </div>
+      <div class="card">
+        <h3>Kling_VIEWS.pdf</h3>
+        <p>Referenztext: Kling_VIEWS.docx (nur inhaltlich, nicht verlinkt).</p>
+        <a class="btn" href="materials/Kling_VIEWS.pdf" target="_blank" rel="noopener">PDF öffnen</a>
+      </div>
+    </section>
+
+    <section id="module-questions" class="section section--dark">
+      <div class="section__header">
+        <h2>VIEWS_Fragen – Interaktiv</h2>
+        <p>Alle Fragen aus dem Dokument VIEWS_Fragen, mit Sofortfeedback auf Basis von Kling_VIEWS.docx.</p>
+      </div>
+      <div class="card">
+        <div id="viewsQuestions" class="qa-list"></div>
+      </div>
+    </section>
+
+    <section id="module-material" class="section">
+      <div class="section__header">
+        <h2>VIEWS Material – Hörbuch</h2>
+        <p>Materialpaket als ZIP, hier als Hörbuch verlinkt.</p>
       </div>
       <div class="grid grid--2">
         <div class="card">
-          <h3>Film 1: VIEWS – A Viral Video Shatters Reality</h3>
+          <h3>VIEWS Material (ZIP) – Hörbuch</h3>
+          <p>Originalmaterial und Hörbuchpaket zum Projekt.</p>
+          <a class="btn" href="https://www.dropbox.com/scl/fi/oqxgso5l54am7ra29my3x/Kling_VIEWS_9783844939873.zip?rlkey=so3mefc68sqoro6sxpe87khfy&st=illuojlx&dl=0" target="_blank" rel="noopener">Hörbuch öffnen</a>
+        </div>
+        <div class="card">
+          <h3>Arbeitsauftrag</h3>
+          <ol class="list list--ordered">
+            <li>Markiere zentrale Begriffe zu Wahrnehmung/Medien.</li>
+            <li>Notiere 3 Begriffe, die du später im Padlet diskutieren willst.</li>
+            <li>Halte 1 These fest, die du im Synthese‑Teil prüfst.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-analysis" class="section">
+      <div class="section__header">
+        <h2>Analyse von VIEWS</h2>
+        <p>Analyse-Video und Audioimpuls zur inhaltlichen Vertiefung.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Film VIEWS - Video-Zusammenfassung</h3>
           <p>Nur Link (kein Embed).</p>
           <a class="btn" href="https://www.dropbox.com/scl/fi/v5dmzxj9vu4j2o4uupnfp/Analyse_von_VIEWS.mp4?rlkey=10y180i5daprggy3jkdlepbw9&st=jejpyzer&dl=0" target="_blank" rel="noopener">Film öffnen</a>
         </div>
-
         <div class="card">
           <h3>Audio: Spotify‑Episode</h3>
           <div class="media">
@@ -98,13 +143,6 @@
       </div>
 
       <div class="card card--wide">
-        <h3>Film 2: (Dropbox‑Link aus NotebookLM ersetzt)</h3>
-        <p>NotebookLM‑Film wurde gemäß Vorgabe durch den Dropbox‑Link ersetzt.</p>
-        <p>Nur Link (kein Embed).</p>
-        <a class="btn" href="https://www.dropbox.com/scl/fi/v5dmzxj9vu4j2o4uupnfp/Analyse_von_VIEWS.mp4?rlkey=10y180i5daprggy3jkdlepbw9&st=jejpyzer&dl=0" target="_blank" rel="noopener">Film öffnen</a>
-      </div>
-
-      <div class="card card--wide">
         <h3>Aktive Wahrnehmung</h3>
         <div class="grid grid--3">
           <div class="pill">Welche Bilder bleiben hängen?</div>
@@ -113,28 +151,6 @@
           <div class="pill">Welche Stadt wird sichtbar?</div>
           <div class="pill">Welche Stadt verschwindet?</div>
           <div class="pill">Welche Gefühle werden provoziert?</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="module-reading" class="section section--alt">
-      <div class="section__header">
-        <h2>Lektüre & Material</h2>
-        <p>ZIP‑Material wird als Dropbox‑Link bereitgestellt (kein Download im Repo).</p>
-      </div>
-      <div class="grid grid--2">
-        <div class="card">
-          <h3>VIEWS Material (ZIP)</h3>
-          <p>Originalmaterial und Dokumente zum Projekt.</p>
-          <a class="btn" href="https://www.dropbox.com/scl/fi/oqxgso5l54am7ra29my3x/Kling_VIEWS_9783844939873.zip?rlkey=so3mefc68sqoro6sxpe87khfy&st=illuojlx&dl=0" target="_blank" rel="noopener">ZIP öffnen</a>
-        </div>
-        <div class="card">
-          <h3>Leseauftrag</h3>
-          <ol class="list list--ordered">
-            <li>Markiere zentrale Begriffe zu Wahrnehmung/Medien.</li>
-            <li>Notiere 3 Begriffe, die du später im Padlet diskutieren willst.</li>
-            <li>Halte 1 These fest, die du im Synthese‑Teil prüfst.</li>
-          </ol>
         </div>
       </div>
     </section>
@@ -199,17 +215,10 @@
         </div>
       </div>
 
-      <div class="grid grid--2">
-        <div class="card">
-          <h3>Analyse‑Quiz</h3>
-          <div id="quiz" class="quiz"></div>
-          <p class="quiz__hint">Sofortkorrektur ist aktiv – jede Auswahl wird direkt bewertet.</p>
-        </div>
-        <div class="card">
-          <h3>Glossar‑Suchfeld</h3>
-          <input id="glossarySearch" class="input" placeholder="Begriff suchen…" aria-label="Glossar Suche" />
-          <div id="glossary" class="glossary"></div>
-        </div>
+      <div class="card">
+        <h3>Glossar‑Suchfeld</h3>
+        <input id="glossarySearch" class="input" placeholder="Begriff suchen…" aria-label="Glossar Suche" />
+        <div id="glossary" class="glossary"></div>
       </div>
     </section>
 

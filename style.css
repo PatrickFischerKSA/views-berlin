@@ -312,6 +312,53 @@ main {
 .quiz__feedback.is-correct { color: #1f7a3f; }
 .quiz__feedback.is-wrong { color: #b42318; }
 
+.qa-list {
+  display: grid;
+  gap: 18px;
+}
+
+.qa-item {
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.section--dark .qa-item {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.qa-question {
+  margin-bottom: 10px;
+}
+
+.qa-textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d9cbb4;
+  font-family: inherit;
+  font-size: 14px;
+  min-height: 90px;
+}
+
+.qa-actions {
+  margin-top: 10px;
+}
+
+.qa-feedback {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff2dc;
+  color: #3d2c1b;
+  display: none;
+  font-weight: 600;
+}
+
+.qa-feedback.is-visible {
+  display: block;
+}
+
 .input, .textarea {
   width: 100%;
   padding: 12px;
