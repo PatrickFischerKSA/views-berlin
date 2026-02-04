@@ -57,46 +57,101 @@ if (sideToggle) {
   });
 }
 
-// Quiz data
+// Quiz data (Transkript IV)
 const quizData = [
   {
-    q: 'Welcher Analyse‑Frame fokussiert auf Ausschlüsse und Unsichtbarkeit?',
-    options: ['Frame 1 – Blickachsen', 'Frame 2 – Bildpolitik & Ausschlüsse', 'Frame 3 – Affekt & Rhythmus'],
-    a: 1
+    q: 'Wie wird der Roman „Views“ im Transkript charakterisiert?',
+    options: ['Als reiner Liebesroman', 'Als Thriller und „Fiebermesser“ der Gesellschaft', 'Als klassischer Historienroman'],
+    a: 1,
+    explain: 'Im Transkript wird „Views“ als Thriller beschrieben, der wie ein Fiebermesser die Gesellschaft misst.'
   },
   {
-    q: 'Welche Frage passt zu Frame 4?',
-    options: ['Wie zirkuliert das Material?', 'Wie wird Geschichte zitiert?', 'Welche Emotionen werden erzeugt?'],
-    a: 1
+    q: 'Welche zentrale Frage treibt die Handlung an?',
+    options: [
+      'Wie wird ein verlorenes Kind gefunden?',
+      'Was passiert, wenn ein einziges virales Video ein Land an den Rand des Abgrunds bringt?',
+      'Wie entsteht eine Liebesgeschichte in Berlin?'
+    ],
+    a: 1,
+    explain: 'Die zentrale, beunruhigende Frage betrifft die Wirkung eines einzigen viralen Videos auf die Gesellschaft.'
   },
   {
-    q: 'Welche Perspektive ist besonders wichtig für die Medienanalyse?',
-    options: ['Nur die Produzentensicht', 'Die dominante und die verdrängte Sicht', 'Nur die Rezipientensicht'],
-    a: 1
+    q: 'Wer ist die Hauptfigur?',
+    options: ['Journalist Stefan', 'BKA‑Hauptkommissarin Yassira Razad', 'Innenministerin'],
+    a: 1,
+    explain: 'Die Hauptfigur ist die BKA‑Hauptkommissarin Yassira Razad.'
+  },
+  {
+    q: 'Was macht das Video im Transkript so „viral“?',
+    options: ['Es ist über 2 Stunden lang', 'Es ist in perfekter TikTok‑Länge unter 60 Sekunden', 'Es wird nur im Fernsehen gezeigt'],
+    a: 1,
+    explain: 'Die „perfekte TikTok‑Länge“ unter 60 Sekunden macht das Video besonders viral.'
+  },
+  {
+    q: 'Wie spaltet sich die Öffentlichkeit laut Transkript?',
+    options: [
+      'In Fans von TikTok und Fans von Instagram',
+      'In zwei Lager: Verbrechen von „Fremden“ vs. Gewalt von Männern gegen eine Frau, Herkunft egal',
+      'In Stadt und Land, ohne Bezug zum Video'
+    ],
+    a: 1,
+    explain: 'Es entstehen zwei unversöhnliche Lager mit gegensätzlicher Deutung des Verbrechens.'
+  },
+  {
+    q: 'Wer ist „Bär“ und wofür stehen die 88 Sekunden?',
+    options: [
+      'Ein Ermittler, 88 steht für einen Polizeicode',
+      'Ein Netz‑Akteur, der Selbstjustiz fordert; 88 ist rechte Symbolik',
+      'Ein Opfer des Videos, 88 ist sein Alter'
+    ],
+    a: 1,
+    explain: '„Bär“ ruft zur Selbstjustiz auf; 88 wird als bewusst gesetzte rechte Symbolik gelesen.'
+  },
+  {
+    q: 'Warum wird Yassira mit der Leitung der Ermittlungen betraut?',
+    options: [
+      'Weil sie die jüngste Ermittlerin ist',
+      'Weil ihre „Nicht‑Deutsche“ Herkunft politisch gegen Rassismusvorwürfe genutzt werden soll',
+      'Weil sie das Video gefilmt hat'
+    ],
+    a: 1,
+    explain: 'Ihre Herkunft wird politisch instrumentalisiert, um Vorwürfe gegen die Polizei zu entkräften.'
+  },
+  {
+    q: 'Was geschieht nach der Lösegeldforderung von 100.000 Dollar in Bitcoin?',
+    options: [
+      'Yassira glaubt sofort, dass der Täter gefasst ist',
+      'Yassira vermutet Trittbrettfahrer, die die Tragödie ausnutzen',
+      'Die Medien berichten nicht darüber'
+    ],
+    a: 1,
+    explain: 'Yassira ist skeptisch und vermutet Trittbrettfahrer.'
   }
 ];
 
 const quizEl = document.getElementById('quiz');
-const quizResult = document.getElementById('quizResult');
-const checkQuiz = document.getElementById('checkQuiz');
 
 if (quizEl) {
   quizEl.innerHTML = quizData.map((item, idx) => {
     const options = item.options.map((opt, i) => {
       return `<label><input type="radio" name="q${idx}" value="${i}"> ${opt}</label>`;
     }).join('');
-    return `<div class="quiz__item"><p><strong>${idx + 1}. ${item.q}</strong></p>${options}</div>`;
+    return `<div class="quiz__item" data-q="${idx}"><p><strong>${idx + 1}. ${item.q}</strong></p>${options}<p class="quiz__feedback" id="qf${idx}"></p></div>`;
   }).join('');
-}
 
-if (checkQuiz) {
-  checkQuiz.addEventListener('click', () => {
-    let score = 0;
-    quizData.forEach((item, idx) => {
-      const selected = document.querySelector(`input[name="q${idx}"]:checked`);
-      if (selected && Number(selected.value) === item.a) score += 1;
+  quizData.forEach((item, idx) => {
+    const inputs = quizEl.querySelectorAll(`input[name="q${idx}"]`);
+    inputs.forEach((input) => {
+      input.addEventListener('change', () => {
+        const feedback = document.getElementById(`qf${idx}`);
+        const isCorrect = Number(input.value) === item.a;
+        if (feedback) {
+          feedback.textContent = isCorrect ? `Richtig. ${item.explain}` : `Falsch. ${item.explain}`;
+          feedback.classList.toggle('is-correct', isCorrect);
+          feedback.classList.toggle('is-wrong', !isCorrect);
+        }
+      });
     });
-    if (quizResult) quizResult.textContent = `Ergebnis: ${score} / ${quizData.length}`;
   });
 }
 

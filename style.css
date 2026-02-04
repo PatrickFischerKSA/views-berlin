@@ -299,6 +299,19 @@ main {
 
 .quiz__result { font-weight: 700; }
 
+.quiz__hint {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.quiz__feedback {
+  margin: 8px 0 0;
+  font-weight: 600;
+}
+
+.quiz__feedback.is-correct { color: #1f7a3f; }
+.quiz__feedback.is-wrong { color: #b42318; }
+
 .input, .textarea {
   width: 100%;
   padding: 12px;
