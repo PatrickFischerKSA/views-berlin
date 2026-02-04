@@ -359,6 +359,21 @@ main {
   display: block;
 }
 
+.field {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.field span {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.field__save {
+  justify-self: start;
+}
+
 .input, .textarea {
   width: 100%;
   padding: 12px;

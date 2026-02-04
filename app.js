@@ -92,7 +92,7 @@ const viewsQuestions = [
   },
   {
     q: 'Welche Wirkung hat das Video auf Stefan, als er es zum ersten Mal sieht?',
-    a: 'Er ist schockiert und alarmiert – er nennt das Video „Sprengstoff“.'
+    a: 'Er ist schockiert und alarmiert – er nennt das Video „Sprengstoff“. '
   },
   {
     q: 'Wie reagiert Yasira auf das Video, und was sagt das über ihre emotionale Belastung aus?',
@@ -251,6 +251,24 @@ if (viewsQuestionsEl) {
     });
   });
 }
+
+// Download buttons for text fields
+const fieldButtons = document.querySelectorAll('[data-save-target]');
+fieldButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-save-target');
+    const filename = btn.getAttribute('data-filename') || 'notizen.txt';
+    const textarea = document.getElementById(targetId);
+    const value = textarea ? textarea.value : '';
+    const blob = new Blob([value], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
 
 // Glossary
 const glossaryData = [

@@ -130,6 +130,11 @@
           <h3>Film VIEWS - Video-Zusammenfassung</h3>
           <p>Nur Link (kein Embed).</p>
           <a class="btn" href="https://www.dropbox.com/scl/fi/v5dmzxj9vu4j2o4uupnfp/Analyse_von_VIEWS.mp4?rlkey=10y180i5daprggy3jkdlepbw9&st=jejpyzer&dl=0" target="_blank" rel="noopener">Film öffnen</a>
+          <label class="field">
+            <span>Gedanken zum Film</span>
+            <textarea id="thoughts-film" class="textarea" placeholder="Schreibe deine Gedanken zum Video…"></textarea>
+            <button class="btn btn--ghost field__save" type="button" data-save-target="thoughts-film" data-filename="gedanken-film.txt">Notizen herunterladen</button>
+          </label>
         </div>
         <div class="card">
           <h3>Audio: Spotify‑Episode</h3>
@@ -139,6 +144,11 @@
           <div class="media__links">
             <a class="link" href="https://open.spotify.com/episode/20k8wOgPOncW16cpk7b8i0?si=4ef6382fe8d14f73" target="_blank" rel="noopener">Spotify‑Link (Original)</a>
           </div>
+          <label class="field">
+            <span>Notizen zur Episode</span>
+            <textarea id="notes-audio" class="textarea" placeholder="Schreibe deine Notizen zum Audio…"></textarea>
+            <button class="btn btn--ghost field__save" type="button" data-save-target="notes-audio" data-filename="notizen-audio.txt">Notizen herunterladen</button>
+          </label>
         </div>
       </div>
 
@@ -251,7 +261,7 @@
       <div class="card card--wide">
         <h3>Abschlussfrage</h3>
         <p><strong>Welche „Version“ von Berlin wird hier hergestellt – und welche würdest du ergänzen?</strong></p>
-        <button class="btn" data-scroll="#module-padlet">Antwort im Padlet posten</button>
+        <a class="btn" href="https://docs.google.com/document/d/1G8EURDQbbhYu8uBQpvm3fyK-07N-0DAe5oAVrFD2E4Y/edit?usp=sharing" target="_blank" rel="noopener">Antwort im Google Doc schreiben</a>
       </div>
     </section>
   </main>
