@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIEWS auf Berlin – Interaktive Lernumgebung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="hero" id="top">
+    <div class="hero__content">
+      <p class="eyebrow">Interaktive Lernumgebung</p>
+      <h1>VIEWS auf Berlin</h1>
+      <p class="lead">
+        Ein immersiver Lernraum zu Wahrnehmung, medialer Konstruktion und urbanen Perspektiven.
+        Integrierte Filme, Audio, Materialien, kollaborative Wand und vertiefende Aufgaben führen
+        Schritt für Schritt von Analyse zu eigener Positionierung.
+      </p>
+      <div class="hero__actions">
+        <button class="btn" data-scroll="#module-media">Direkt zu den Medien</button>
+        <button class="btn btn--ghost" data-scroll="#module-work">Arbeitsmodus</button>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="stat">
+        <span class="stat__label">Module</span>
+        <span class="stat__value">6</span>
+      </div>
+      <div class="stat">
+        <span class="stat__label">Interaktive Elemente</span>
+        <span class="stat__value">12+</span>
+      </div>
+      <div class="stat">
+        <span class="stat__label">Arbeitszeit</span>
+        <span class="stat__value">ca. 90–120 Min</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="side-nav" aria-label="Seitennavigation">
+    <div class="side-nav__logo">VIEWS</div>
+    <button class="side-nav__toggle" aria-expanded="false">Menü</button>
+    <ul class="side-nav__list">
+      <li><a href="#module-work">Arbeitsmodus</a></li>
+      <li><a href="#module-media">Filme & Audio</a></li>
+      <li><a href="#module-reading">Lektüre</a></li>
+      <li><a href="#module-padlet">Padlet</a></li>
+      <li><a href="#module-frames">Analyse-Frames</a></li>
+      <li><a href="#module-synthesis">Synthese</a></li>
+    </ul>
+    <div class="side-nav__progress">
+      <span>Fortschritt</span>
+      <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
+      <div class="progress__meta">
+        <span id="progressLabel">0%</span>
+        <span id="timeOnTask">00:00</span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="module-work" class="section section--dark">
+      <div class="section__header">
+        <h2>Arbeitsmodus</h2>
+        <p>Explizite Regeln und Arbeitsabfolge für diese Lernumgebung.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Regeln (wie gewünscht)</h3>
+          <ul class="list">
+            <li>Kein Minimalismus</li>
+            <li>Keine Vereinfachung</li>
+            <li>Keine stillschweigenden Änderungen</li>
+            <li>Keine Platzhalter</li>
+            <li>Keine ausgelassenen Teile</li>
+            <li>Vollständige Dateien</li>
+            <li>Jede Änderung explizit markieren</li>
+            <li>Bei Unsicherheit: abbrechen und nachfragen</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Arbeitsabfolge</h3>
+          <ol class="list list--ordered">
+            <li>Medien wahrnehmen (Film + Audio)</li>
+            <li>Kontext lesen (ZIP‑Material)</li>
+            <li>Gemeinsam sammeln (Padlet)</li>
+            <li>Analyse‑Frames anwenden</li>
+            <li>Positionieren und synthetisieren</li>
+          </ol>
+          <div class="notice">
+            Tipp: Nutze die Fortschrittsanzeige links und notiere Erkenntnisse direkt in der Notizstation.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-media" class="section">
+      <div class="section__header">
+        <h2>Filme & Audio</h2>
+        <p>Alle Filme werden als Dropbox‑Links eingebunden. Audio wird über Spotify eingebettet.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Film 1: VIEWS – A Viral Video Shatters Reality</h3>
+          <div class="media">
+            <video controls preload="none" poster="" aria-label="VIEWS – A Viral Video Shatters Reality">
+              <source src="https://www.dropbox.com/scl/fi/ckdrtq92p7k5vehmat4nd/VIEWS__A_Viral_Video_Shatters_Reality.mp4?raw=1" type="video/mp4" />
+            </video>
+            <div class="media__links">
+              <a class="link" href="https://www.dropbox.com/scl/fi/ckdrtq92p7k5vehmat4nd/VIEWS__A_Viral_Video_Shatters_Reality.mp4?rlkey=sszmhnne6tdr629w6x55er813&st=a6nv9153&dl=0" target="_blank" rel="noopener">Dropbox‑Link (Original)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Audio: Spotify‑Episode</h3>
+          <div class="media">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/20k8wOgPOncW16cpk7b8i0?utm_source=generator" width="100%" height="232" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify Episode"></iframe>
+          </div>
+          <div class="media__links">
+            <a class="link" href="https://open.spotify.com/episode/20k8wOgPOncW16cpk7b8i0?si=4ef6382fe8d14f73" target="_blank" rel="noopener">Spotify‑Link (Original)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--wide">
+        <h3>Film 2: (Dropbox‑Link aus NotebookLM ersetzt)</h3>
+        <p>NotebookLM‑Film wurde gemäß Vorgabe durch den Dropbox‑Link ersetzt.</p>
+        <div class="media">
+          <video controls preload="none" aria-label="NotebookLM Film als Dropbox-Link">
+            <source src="https://www.dropbox.com/scl/fi/ckdrtq92p7k5vehmat4nd/VIEWS__A_Viral_Video_Shatters_Reality.mp4?raw=1" type="video/mp4" />
+          </video>
+          <div class="media__links">
+            <a class="link" href="https://www.dropbox.com/scl/fi/ckdrtq92p7k5vehmat4nd/VIEWS__A_Viral_Video_Shatters_Reality.mp4?rlkey=sszmhnne6tdr629w6x55er813&st=a6nv9153&dl=0" target="_blank" rel="noopener">Dropbox‑Link (Original)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--wide">
+        <h3>Aktive Wahrnehmung</h3>
+        <div class="grid grid--3">
+          <div class="pill">Welche Bilder bleiben hängen?</div>
+          <div class="pill">Wer spricht? Wer schweigt?</div>
+          <div class="pill">Welche Perspektive wird gesetzt?</div>
+          <div class="pill">Welche Stadt wird sichtbar?</div>
+          <div class="pill">Welche Stadt verschwindet?</div>
+          <div class="pill">Welche Gefühle werden provoziert?</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-reading" class="section section--alt">
+      <div class="section__header">
+        <h2>Lektüre & Material</h2>
+        <p>ZIP‑Material wird als Dropbox‑Link bereitgestellt (kein Download im Repo).</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>VIEWS Material (ZIP)</h3>
+          <p>Originalmaterial und Dokumente zum Projekt.</p>
+          <a class="btn" href="https://www.dropbox.com/scl/fi/oqxgso5l54am7ra29my3x/Kling_VIEWS_9783844939873.zip?rlkey=so3mefc68sqoro6sxpe87khfy&st=illuojlx&dl=0" target="_blank" rel="noopener">ZIP öffnen</a>
+        </div>
+        <div class="card">
+          <h3>Leseauftrag</h3>
+          <ol class="list list--ordered">
+            <li>Markiere zentrale Begriffe zu Wahrnehmung/Medien.</li>
+            <li>Notiere 3 Begriffe, die du später im Padlet diskutieren willst.</li>
+            <li>Halte 1 These fest, die du im Synthese‑Teil prüfst.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-padlet" class="section">
+      <div class="section__header">
+        <h2>Padlet – Gemeinsame Wand</h2>
+        <p>Die kollaborative Sammlung für Perspektiven, Zitate, Thesen und Bildbeobachtungen.</p>
+      </div>
+      <div class="card">
+        <iframe src="https://padlet.com/fabiennezosso/views-auf-berlin-tpyap8rue2kje03t" title="Padlet: Views auf Berlin" loading="lazy"></iframe>
+        <div class="media__links">
+          <a class="link" href="https://padlet.com/fabiennezosso/views-auf-berlin-tpyap8rue2kje03t" target="_blank" rel="noopener">Padlet im neuen Tab öffnen</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-frames" class="section section--dark">
+      <div class="section__header">
+        <h2>Analyse‑Frames</h2>
+        <p>Fünf strukturierende Blickrichtungen für die Medienanalyse.</p>
+      </div>
+      <div class="accordion" data-accordion>
+        <button class="accordion__item" aria-expanded="false">
+          <span>Frame 1 – Blickachsen & Perspektiven</span>
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__panel">
+          <p>Welche Blickrichtung wird dominant? Wird von oben, von innen oder von der Peripherie erzählt? Welche Kamera‑Position erzeugt Autorität?</p>
+        </div>
+
+        <button class="accordion__item" aria-expanded="false">
+          <span>Frame 2 – Bildpolitik & Ausschlüsse</span>
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__panel">
+          <p>Welche Räume sind sichtbar, welche bleiben unsichtbar? Welche Körper und Stimmen werden privilegiert?</p>
+        </div>
+
+        <button class="accordion__item" aria-expanded="false">
+          <span>Frame 3 – Affekt & Rhythmus</span>
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__panel">
+          <p>Welche Emotionen werden erzeugt? Über welche musikalischen, visuellen oder narrativen Taktungen?</p>
+        </div>
+
+        <button class="accordion__item" aria-expanded="false">
+          <span>Frame 4 – Archiv & Erinnerung</span>
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__panel">
+          <p>Wie wird Geschichte zitiert? Welche Archivalität wird behauptet oder simuliert?</p>
+        </div>
+
+        <button class="accordion__item" aria-expanded="false">
+          <span>Frame 5 – Öffentlichkeit & Resonanz</span>
+          <span class="accordion__icon">+</span>
+        </button>
+        <div class="accordion__panel">
+          <p>Wie zirkuliert das Material? Welche Reaktionen sind vorgesehen, welche werden ausgeschlossen?</p>
+        </div>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Analyse‑Quiz</h3>
+          <div id="quiz" class="quiz"></div>
+          <button class="btn" id="checkQuiz">Auswerten</button>
+          <p class="quiz__result" id="quizResult"></p>
+        </div>
+        <div class="card">
+          <h3>Glossar‑Suchfeld</h3>
+          <input id="glossarySearch" class="input" placeholder="Begriff suchen…" aria-label="Glossar Suche" />
+          <div id="glossary" class="glossary"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module-synthesis" class="section">
+      <div class="section__header">
+        <h2>Synthese & Positionierung</h2>
+        <p>Hier wird aus Beobachtungen eine eigenständige Haltung.</p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Notizstation</h3>
+          <textarea id="notes" class="textarea" placeholder="Schreibe deine Thesen, Zitate, Fragen…"></textarea>
+          <div class="row">
+            <button class="btn" id="saveNotes">Notizen herunterladen</button>
+            <button class="btn btn--ghost" id="clearNotes">Leeren</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Checkliste für die eigene Position</h3>
+          <div class="checklist" id="checklist">
+            <label><input type="checkbox" /> Ich kann die dominante Perspektive benennen.</label>
+            <label><input type="checkbox" /> Ich habe Ausschlüsse identifiziert.</label>
+            <label><input type="checkbox" /> Ich kann Affektstrategien beschreiben.</label>
+            <label><input type="checkbox" /> Ich habe Bezug zum Material (ZIP) hergestellt.</label>
+            <label><input type="checkbox" /> Ich habe meine These im Padlet geteilt.</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--wide">
+        <h3>Abschlussfrage</h3>
+        <p><strong>Welche „Version“ von Berlin wird hier hergestellt – und welche würdest du ergänzen?</strong></p>
+        <button class="btn" data-scroll="#module-padlet">Antwort im Padlet posten</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>VIEWS auf Berlin – Lernumgebung. Alle Medien eingebettet über Original‑Links.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
